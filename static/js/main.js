@@ -168,11 +168,18 @@
    * Porfolio isotope and filter
    */
   window.addEventListener('load', () => {
-    let portfolioContainer = select('.portfolio-container');
+
+      let portfolioContainer = select('#portfolio-Container');
     if (portfolioContainer) {
-      let portfolioIsotope = new Isotope(portfolioContainer, {
+
+
+        let portfolioIsotope = new Isotope(portfolioContainer, {
         itemSelector: '.portfolio-item'
       });
+
+
+
+
 
       let portfolioFilters = select('#portfolio-flters li', true);
 
