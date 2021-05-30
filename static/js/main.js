@@ -291,6 +291,21 @@
 
 
 
+    let portfolioContainer = select('.portfolio-container');
+
+
+    let portfolioIsotope = new Isotope(portfolioContainer, {
+        itemSelector: '.portfolio-item'
+    });
+
+    portfolioIsotope.arrange({
+        filter: '.filter-bm'
+    });
+    portfolioIsotope.on('arrangeComplete', function () {
+        AOS.refresh()
+    });
+
+
     let portfolioFilters = select('.filter-ga', true);
     portfolioFilters.forEach(function (el) {
         el.style.display = "none";
@@ -312,19 +327,6 @@
 
 
 
-    let portfolioContainer = select('.portfolio-container');
-
-
-    let portfolioIsotope = new Isotope(portfolioContainer, {
-        itemSelector: '.portfolio-item'
-    });
-
-    portfolioIsotope.arrange({
-        filter: '.filter-bm'
-    });
-    portfolioIsotope.on('arrangeComplete', function () {
-        AOS.refresh()
-    });
 
 
     //------------ Initially hide other then default
