@@ -291,19 +291,19 @@
 
 
 
-    //let portfolioContainer = select('.portfolio-container');
+    let portfolioContainer = select('.portfolio-container');
 
 
-    //let portfolioIsotope = new Isotope(portfolioContainer, {
-    //    itemSelector: '.portfolio-item'
-    //});
+    let portfolioIsotope = new Isotope(portfolioContainer, {
+        itemSelector: '.portfolio-item'
+    });
 
-    //portfolioIsotope.arrange({
-    //    filter: '.filter-bm'
-    //});
-    //portfolioIsotope.on('arrangeComplete', function () {
-    //    AOS.refresh()
-    //});
+    portfolioIsotope.arrange({
+        filter: '.filter-bm'
+    });
+    portfolioIsotope.on('arrangeComplete', function () {
+        AOS.refresh()
+    });
 
 
     let portfolioFilters = select('.filter-ga', true);
