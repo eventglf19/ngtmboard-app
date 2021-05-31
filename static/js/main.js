@@ -325,6 +325,11 @@
         el.style.display = null;
     });
 
+    let portfolioContainer = select('.portfolio-container');
+
+    let portfolioIsotope = new Isotope(portfolioContainer, {
+        itemSelector: '.portfolio-item'
+    });
 
     portfolioIsotope.arrange({
         filter: '.filter-bm'
