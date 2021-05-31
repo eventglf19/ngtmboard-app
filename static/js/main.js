@@ -291,20 +291,6 @@
 
 
 
-    let portfolioContainer = select('.portfolio-container');
-
-
-    let portfolioIsotope = new Isotope(portfolioContainer, {
-        itemSelector: '.portfolio-item'
-    });
-
-    portfolioIsotope.arrange({
-        filter: '.filter-bm'
-    });
-    portfolioIsotope.on('arrangeComplete', function () {
-        AOS.refresh()
-    });
-
 
     let portfolioFilters = select('.filter-ga', true);
     portfolioFilters.forEach(function (el) {
@@ -326,6 +312,27 @@
     });
 
 
+
+    let portfolioFilters3 = select('.filter-bm', true);
+    portfolioFilters3.forEach(function (el) {
+        el.style.display = "none";
+    });
+
+
+
+    let portfolioFilters4 = select('.filter-bm', true);
+    portfolioFilters4.forEach(function (el) {
+        el.style.display = null;
+    });
+
+
+    portfolioIsotope.arrange({
+        filter: '.filter-bm'
+    });
+
+    portfolioIsotope.on('arrangeComplete', function () {
+        AOS.refresh()
+    });
 
 
 
