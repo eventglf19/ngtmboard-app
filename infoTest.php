@@ -1,9 +1,17 @@
 <html>
 <head><title>PHP Mail Sender</title></head>
 <body>
+
 <?php
- 
-  echo "<h4>Thank you for sending email</h4>";
+
+	$myfile = fopen("newfile.txt", "w") or die("Unable to open file!");
+	$txt = "John Doe\n";
+	fwrite($myfile, $txt);
+	$txt = "Jane Doe\n";
+	fwrite($myfile, $txt);
+	fclose($myfile);
+
 ?>
+
 </body>
 </html>
