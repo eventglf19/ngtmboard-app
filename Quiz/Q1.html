@@ -26,6 +26,9 @@
     <link href="../static/animations/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="../static/animations/swiper/swiper-bundle.min.css" rel="stylesheet">
 
+    <link href="../static/animations/sweetalert/sweetalert2.css" rel="stylesheet">
+
+
     <!-- Template Main CSS File -->
     <link href="../static/css/style.css" rel="stylesheet">
 
@@ -50,6 +53,16 @@
             -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
         }
+
+        span, label {
+            font-style: italic;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+      
     </style>
 
 </head>
@@ -64,15 +77,15 @@
 
     <main id="main">
 
-        <div class="row">
-            <div class="col-6">
+        <div class="container row">
+            <div class="col-6" style="text-align:right">
 
-                <img style='width: 20%;height: auto;' src='img/logo.png'>
+                <img style='width: 40%;height: auto;' src='img/logo.png'>
 
             </div>
             <div class="col-6" style="padding-right:20px">
 
-                <table  style="height:100%;width:80%">
+                <table style="height:100%;width:80%">
                     <tr>
                         <td valign="middle" align="right">
 
@@ -102,77 +115,227 @@
                 <div class="row">
                     <div class="col-4">
                         <label>Unique Id <span class="text-red">*</span></label>
-                        <input class="form-control" id="txtUniqueId" name="txtUniqueId" type="text" value="">
+                        <input class="form-control" id="txtUniqueId" name="txtUniqueId" type="text" value="" maxlength="11">
+                    </div>
+                    <div class="col-4 mt-4">
+                        <input class="btn btn-primary" id="btnshowQuiz" name="btnshowQuiz" type="button" value="Get Started">
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-12 mt-4">
-                        <label>Q1: Are plastics made of natural substances or chemical substances?</label>
-                        <div class="mt-2">
-                            <span>
-                                <input class="radio" type="radio" name="chkQ1" id="chkQ1" data-content="true">
-                                <span class="chkText">Natural</span>
-                            </span>
-                            <span>
-                                <input class="radio" type="radio" name="chkQ1" id="chkQ1">
-                                <span class="chkText">Chemical</span>
-                            </span>
+                <section id="quizContainer">
+                    <div class="row">
+                        <div class="col-12 mt-4">
+                            <label class="bold">Q1 : Are plastics made of natural substances or chemical substances?</label>
+                            <div class="mt-2">
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ1" id="chkQ1" data-content="true">
+                                    <span class="chkText">Natural</span>
+                                </span>
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ1" id="chkQ1">
+                                    <span class="chkText">Chemical</span>
+                                </span>
+                            </div>
                         </div>
                     </div>
-                </div>
 
+                    <div class="row">
+                        <div class="col-12 mt-4">
+                            <label class="bold">Q2 : Are plastics made of natural substances or chemical substances?</label>
+                            <div class="mt-2">
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ2" id="chkQ2">
+                                    <span class="chkText">They are light weight</span>
+                                </span>
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ2" id="chkQ2">
+                                    <span class="chkText">They can change in to shape</span>
+                                </span>
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ2" id="chkQ2">
+                                    <span class="chkText">They are affordable</span>
+                                </span>
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ2" id="chkQ2" data-content="true">
+                                    <span class="chkText">All the above</span>
+                                </span>
 
-
-                <div class="row">
-                    <div class="col-12 mt-4">
-                        <label>Q1: Are plastics made of natural substances or chemical substances?</label>
-                        <div class="mt-2">
-                            <span>
-                                <input class="radio" type="radio" name="chkQ2" id="chkQ2">
-                                <span class="chkText">They are light weight</span>
-                            </span>
-                            <span>
-                                <input class="radio" type="radio" name="chkQ2" id="chkQ2">
-                                <span class="chkText">They can change in to shape</span>
-                            </span>
-                            <span>
-                                <input class="radio" type="radio" name="chkQ2" id="chkQ2">
-                                <span class="chkText">They are affordable</span>
-                            </span>
-                            <span>
-                                <input class="radio" type="radio" name="chkQ2" id="chkQ2" data-content="true">
-                                <span class="chkText">All the above</span>
-                            </span>
-
+                            </div>
                         </div>
                     </div>
-                </div>
+
+                    <div class="row">
+                        <div class="col-12 mt-4">
+                            <label class="bold">Q3 : What are plastics?</label>
+                            <div class="mt-2">
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ3" id="chkQ3" data-content="true">
+                                    <span class="chkText">Plastics are simply chains of like molecules linked together. These chains are called polymers</span> <br />
+                                </span>
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ3" id="chkQ3">
+                                    <span class="chkText">Plastics are the natural products</span><br />
+                                </span>
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ3" id="chkQ3">
+                                    <span class="chkText">Plastics are edible for all living things</span><br />
+                                </span>
 
 
+                            </div>
+                        </div>
+                    </div>
 
 
+                    <div class="row">
+                        <div class="col-12 mt-4">
+                            <label class="bold">Q4 : Can plastics be recycled ?</label>
+                            <div class="mt-2">
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ4" id="chkQ4" data-content="true">
+                                    <span class="chkText">YES</span>
+                                </span>
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ4" id="chkQ4">
+                                    <span class="chkText">No</span>
+                                </span>
 
 
+                            </div>
+                        </div>
+                    </div>
 
 
+                    <div class="row">
+                        <div class="col-12 mt-4">
+                            <label class="bold">Q5 : What is single use plastics ?</label>
+                            <div class="mt-2">
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ5" id="chkQ5">
+                                    <span class="chkText">Plastics Toys</span> <br />
+                                </span>
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ5" id="chkQ5">
+                                    <span class="chkText">Chairs made of plastics</span><br />
+                                </span>
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ5" id="chkQ5" data-content="true">
+                                    <span class="chkText">Single-use plastic products (SUPs) are used once, or for a short period of time, before being thrown away</span>
+                                </span>
+
+                            </div>
+                        </div>
+                    </div>
 
 
+                    <div class="row">
+                        <div class="col-12 mt-4">
+                            <label class="bold">Q6 : What single-use plastics are banned in Tamilnadu?</label>
+                            <div class="mt-2">
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ6" id="chkQ6">
+                                    <span class="chkText">PIPES</span> <br />
+                                </span>
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ6" id="chkQ6"> 
+                                    <span class="chkText">HOUSE HOLD ITEMS</span> <br />
+                                </span>
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ6" id="chkQ6" data-content="true">
+                                    <span class="chkText">Plastic grocery bags, straws, stir sticks, cutlery and food take-out containers that are hard to recycle</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
 
 
+                    <div class="row">
+                        <div class="col-12 mt-4">
+                            <label class="bold">Q7 : Wrapping snacks in plastic covers to school?</label>
+                            <div class="mt-2">
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ7" id="chkQ7">
+                                    <span class="chkText">Correct</span>
+                                </span>
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ7" id="chkQ7" data-content="true">
+                                    <span class="chkText">Wrong</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
 
 
+                    <div class="row">
+                        <div class="col-12 mt-4">
+                            <label class="bold">Q8 : Alternative for plastic material?</label>
+                            <div class="mt-2">
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ8" id="chkQ8">
+                                    <span class="chkText">Wood</span>
+                                </span>
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ8" id="chkQ8">
+                                    <span class="chkText">Glass</span>
+                                </span>
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ8" id="chkQ8">
+                                    <span class="chkText">Bamboo</span>
+                                </span>
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ8" id="chkQ8" data-content="true">
+                                    <span class="chkText">All the above</span>
+                                </span>
+
+                            </div>
+                        </div>
+                    </div>
 
 
+                    <div class="row">
+                        <div class="col-12 mt-4">
+                            <label class="bold">Q9 : Can plastic cause Health Problems?</label>
+                            <div class="mt-2">
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ9" id="chkQ9" data-content="true">
+                                    <span class="chkText">Yes</span>
+                                </span>
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ9" id="chkQ9">
+                                    <span class="chkText">No</span>
+                                </span>
 
 
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="row">
+                        <div class="col-12 mt-4">
+                            <label class="bold">Q10 : How can we reduce Plastic Pollution?</label>
+                            <div class="mt-2">
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ10" id="chkQ10">
+                                    <span class="chkText">Avoid using Single use plastics</span> <br />
+                                </span>
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ10" id="chkQ10">
+                                    <span class="chkText">Carry Cloth Bag for shopping</span> <br />
+                                </span>
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ10" id="chkQ10">
+                                    <span class="chkText">Using Stainless steel or glass bottles instead of single use plastic bottles</span> <br />
+                                </span>
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ10" id="chkQ10" data-content="true">
+                                    <span class="chkText">All the above</span>
+                                </span>
 
+                            </div>
+                        </div>
+                    </div>
 
-
-
-
-
+                </section>
 
             </div>
         </section><!-- End Facts Section -->
@@ -180,7 +343,7 @@
 
     </main><!-- End #main -->
     <!-- ======= Footer ======= -->
-    <footer id="footer">
+    <footer id="footer" style="height: 80px">
         <div class="container">
 
             <div class="copyright">
@@ -195,6 +358,11 @@
 
     <!-- Vendor JS Files -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="../static/animations/sweetalert/sweetalert2.js"></script>
+    <script src="../static/js/jquery.min.js"></script>
+
+
 
     <script src="../static/animations/aos/aos.js"></script>
     <script src="../static/animations/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -215,6 +383,23 @@
         (function () {
 
 
+          //  $("#quizContainer").hide();
+          //  $("#footer").hide();
+
+            $("#btnshowQuiz").click(function () {
+
+                if ($("#txtUniqueId").val() == "") {
+                    Swal.fire(
+                        'Unique Id missing!',
+                        'Please enter your 11 digit unique id!!',
+                        'error'
+                    )
+                    return false;
+                }
+                $("#quizContainer").show();
+                $("#footer").show();
+
+            });
 
             $("input[type='radio']").click(function () {
 
@@ -227,6 +412,11 @@
 
                 if ($(this).attr('data-content') == "true") {
                     $(this).parent().addClass("chkgreen");
+                    Swal.fire(
+                        'Good job!',
+                        'Your answer is correct! KEEP IT UP',
+                        'success'
+                    )
                 }
                 else {
                     $(this).parent().addClass("chkred");
