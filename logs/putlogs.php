@@ -6,5 +6,5 @@
 	fwrite($myfile, $txt);
 	fclose($myfile);
 
-	echo "done";
+	echo $myfile;
 ?>
