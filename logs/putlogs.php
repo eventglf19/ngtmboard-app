@@ -1,6 +1,3 @@
-<html>
-<head><title>PHP Mail Sender</title></head>
-<body>
 
 <?php
 
@@ -11,6 +8,3 @@
 
 	echo "done";
 ?>
-
-</body>
-</html>
