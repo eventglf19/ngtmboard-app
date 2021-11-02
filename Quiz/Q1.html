@@ -356,9 +356,7 @@
     <div id="preloader"></div>
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-    <!-- Vendor JS Files -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+ 
     <script src="../static/animations/sweetalert/sweetalert2.js"></script>
     <script src="../static/js/jquery.min.js"></script>
 
@@ -383,8 +381,8 @@
         (function () {
 
 
-          //  $("#quizContainer").hide();
-          //  $("#footer").hide();
+            $("#quizContainer").hide();
+            $("#footer").hide();
 
             $("#btnshowQuiz").click(function () {
 
@@ -396,6 +394,19 @@
                     )
                     return false;
                 }
+
+
+                $.ajax({
+                    url: "/logs/putlogs.php?q=1&u=1",
+                    type: 'GET',
+                    success: function (res) {
+                        console.log(res);
+                        alert(res);
+                    }
+                });
+
+
+
                 $("#quizContainer").show();
                 $("#footer").show();
 
