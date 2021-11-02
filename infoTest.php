@@ -4,7 +4,7 @@
 
 <?php
 
-	$myfile = fopen("ngtmQuizLogs.txt", "a") or die("Unable to open file!");
+	$myfile = fopen("ngtmQuizLogs.txt", "a+") or die("Unable to open file!");
 	$txt = date("Y-m-d h:i:sa") + $_GET['q'] + $_GET['u'] + "\n";
 	fwrite($myfile, $txt);
 	fclose($myfile);
