@@ -397,7 +397,7 @@
 
 
                 $.ajax({
-                    url: "/logs/putlogs.php?q=1&u=1",
+                    url: "/logs/putlogs.php?q=Q1&u=" + $("#txtUniqueId").val(),
                     type: 'GET',
                     success: function (res) {
                         console.log(res);
