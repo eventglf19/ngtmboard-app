@@ -26,6 +26,9 @@
     <link href="../static/animations/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="../static/animations/swiper/swiper-bundle.min.css" rel="stylesheet">
 
+    <link href="../static/animations/sweetalert/sweetalert2.css" rel="stylesheet">
+
+
     <!-- Template Main CSS File -->
     <link href="../static/css/style.css" rel="stylesheet">
 
@@ -50,6 +53,16 @@
             -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
         }
+
+        span, label {
+            font-style: italic;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+      
     </style>
 
 </head>
@@ -64,15 +77,15 @@
 
     <main id="main">
 
-        <div class="row">
-            <div class="col-6">
+        <div class="container row">
+            <div class="col-6" style="text-align:right">
 
-                <img style='width: 20%;height: auto;' src='img/logo.png'>
+                <img style='width: 40%;height: auto;' src='img/logo.png'>
 
             </div>
             <div class="col-6" style="padding-right:20px">
 
-                <table  style="height:100%;width:80%">
+                <table style="height:100%;width:80%">
                     <tr>
                         <td valign="middle" align="right">
 
@@ -100,79 +113,230 @@
             <div class="container" data-aos="fade-up">
 
                 <div class="row">
-                    <div class="col-4">
+                    <div class="col-6">
                         <label>Unique Id <span class="text-red">*</span></label>
-                        <input class="form-control" id="txtUniqueId" name="txtUniqueId" type="text" value="">
+                        <input class="form-control" id="txtUniqueId" name="txtUniqueId" type="text" value="" maxlength="11">
                     </div>
+                    <div class="col-6 mt-4">
+                        <input class="btn btn-primary" id="btnshowQuiz" name="btnshowQuiz" type="button" value="Get Started">
+                    </div>
+                    
                 </div>
 
-                <div class="row">
-                    <div class="col-12 mt-4">
-                        <label>Q1: Are plastics made of natural substances or chemical substances?</label>
-                        <div class="mt-2">
-                            <span>
-                                <input class="radio" type="radio" name="chkQ1" id="chkQ1" data-content="true">
-                                <span class="chkText">Natural</span>
-                            </span>
-                            <span>
-                                <input class="radio" type="radio" name="chkQ1" id="chkQ1">
-                                <span class="chkText">Chemical</span>
-                            </span>
+                <section id="quizContainer">
+                    <div class="row">
+                        <div class="col-12 mt-4">
+                            <label class="bold">Q1 : நெகிழி  (பிளாஸ்டிக்) இயற்கை பொருட்களா அல்லது இரசாயன பொருட்களா?</label>
+                            <div class="mt-2">
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ1" id="chkQ1" data-content="true">
+                                    <span class="chkText">இயற்கை</span>
+                                </span>
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ1" id="chkQ1">
+                                    <span class="chkText">ரசாயனம்</span>
+                                </span>
+                            </div>
                         </div>
                     </div>
-                </div>
 
+                    <div class="row">
+                        <div class="col-12 mt-4">
+                            <label class="bold">Q2 : நிறுவனங்கள் ஏன் தங்கள் தயாரிப்புகளில்  நெகிழியை  பயன்படுத்துகின்றன?</label>
+                            <div class="mt-2">
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ2" id="chkQ2">
+                                    <span class="chkText">அவை குறைந்த எடை கொண்டவை</span>
+                                </span>
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ2" id="chkQ2">
+                                    <span class="chkText">அவை வடிவத்திற்கு மாறலாம்</span>
+                                </span>
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ2" id="chkQ2">
+                                    <span class="chkText">அவை மலிவு</span>
+                                </span>
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ2" id="chkQ2" data-content="true">
+                                    <span class="chkText">மேலே உள்ள அனைத்தும்</span>
+                                </span>
 
-
-                <div class="row">
-                    <div class="col-12 mt-4">
-                        <label>Q1: Are plastics made of natural substances or chemical substances?</label>
-                        <div class="mt-2">
-                            <span>
-                                <input class="radio" type="radio" name="chkQ2" id="chkQ2">
-                                <span class="chkText">They are light weight</span>
-                            </span>
-                            <span>
-                                <input class="radio" type="radio" name="chkQ2" id="chkQ2">
-                                <span class="chkText">They can change in to shape</span>
-                            </span>
-                            <span>
-                                <input class="radio" type="radio" name="chkQ2" id="chkQ2">
-                                <span class="chkText">They are affordable</span>
-                            </span>
-                            <span>
-                                <input class="radio" type="radio" name="chkQ2" id="chkQ2" data-content="true">
-                                <span class="chkText">All the above</span>
-                            </span>
-
+                            </div>
                         </div>
                     </div>
-                </div>
+
+                    <div class="row">
+                        <div class="col-12 mt-4">
+                            <label class="bold">Q3 : நெகிழி (பிளாஸ்டிக்) என்றால் என்ன?</label>
+                            <div class="mt-2">
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ3" id="chkQ3" data-content="true">
+                                    <span class="chkText">பிளாஸ்டிக் என்பது மூலக்கூறுகள் ஒன்றோடொன்று இணைக்கப்பட்ட சங்கிலிகள். இந்த சங்கிலிகள் பாலிமர்கள் என்று அழைக்கப்படுகின்றன</span> <br />
+                                </span>
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ3" id="chkQ3">
+                                    <span class="chkText">பிளாஸ்டிக் இயற்கை பொருட்கள்</span><br />
+                                </span>
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ3" id="chkQ3">
+                                    <span class="chkText">பிளாஸ்டிக் அனைத்து உயிரினங்களுக்கும் உண்ணக்கூடியது</span><br />
+                                </span>
 
 
+                            </div>
+                        </div>
+                    </div>
 
 
+                    <div class="row">
+                        <div class="col-12 mt-4">
+                            <label class="bold">Q4 : நெகிழியை (பிளாஸ்டிக்கை) மறுசுழற்சி செய்ய முடியுமா?</label>
+                            <div class="mt-2">
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ4" id="chkQ4" data-content="true">
+                                    <span class="chkText">ஆம்</span>
+                                </span>
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ4" id="chkQ4">
+                                    <span class="chkText">இல்லை</span>
+                                </span>
 
 
+                            </div>
+                        </div>
+                    </div>
 
 
+                    <div class="row">
+                        <div class="col-12 mt-4">
+                            <label class="bold">Q5 : ஒருமுறை பயன்படுத்தும் நெகிழி (பிளாஸ்டிக்)  என்றால் என்ன?</label>
+                            <div class="mt-2">
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ5" id="chkQ5">
+                                    <span class="chkText">நெகிழி பொம்மைகள்</span> <br />
+                                </span>
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ5" id="chkQ5">
+                                    <span class="chkText">நெகிழியால்  செய்யப்பட்ட நாற்காலிகள்</span><br />
+                                </span>
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ5" id="chkQ5" data-content="true">
+                                    <span class="chkText">ஒருமுறை பயன்படுத்தப்படும் நெகிழி பொருட்கள் (SUPs) தூக்கி எறியப்படுவதற்கு முன் ஒருமுறை அல்லது குறுகிய காலத்திற்கு பயன்படுத்தப்படும்</span>
+                                </span>
+
+                            </div>
+                        </div>
+                    </div>
 
 
+                    <div class="row">
+                        <div class="col-12 mt-4">
+                            <label class="bold">Q6 : தமிழகத்தில் தடைசெய்யப்பட்ட ஒருமுறை பயன்படுத்தும்  நெகிழிகள் எவை?</label>
+                            <div class="mt-2">
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ6" id="chkQ6">
+                                    <span class="chkText">குழாய்கள்</span> <br />
+                                </span>
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ6" id="chkQ6"> 
+                                    <span class="chkText">வீட்டு  உபயோக பொருட்கள்</span> <br />
+                                </span>
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ6" id="chkQ6" data-content="true">
+                                    <span class="chkText">நெகிழி  பைகள், வைக்கோல், அசை குச்சிகள், கட்லரி மற்றும் உணவு எடுத்துச் செல்லும் கொள்கலன்கள் மறுசுழற்சி செய்ய கடினமாக உள்ளது</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
 
 
+                    <div class="row">
+                        <div class="col-12 mt-4">
+                            <label class="bold">Q7 : பள்ளிக்கு தின்பண்டங்களை நெகிழியால் மூடப்பட்டு  கொண்டு வருவது?</label>
+                            <div class="mt-2">
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ7" id="chkQ7">
+                                    <span class="chkText">சரி</span>
+                                </span>
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ7" id="chkQ7" data-content="true">
+                                    <span class="chkText">தவறு</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
 
 
+                    <div class="row">
+                        <div class="col-12 mt-4">
+                            <label class="bold">Q8 : நெகிழிக்கு பொருட்களுக்கு மாற்று?</label>
+                            <div class="mt-2">
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ8" id="chkQ8">
+                                    <span class="chkText">மரம்</span>
+                                </span>
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ8" id="chkQ8">
+                                    <span class="chkText">கண்ணாடி</span>
+                                </span>
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ8" id="chkQ8">
+                                    <span class="chkText">மூங்கில்</span>
+                                </span>
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ8" id="chkQ8" data-content="true">
+                                    <span class="chkText">மேலே உள்ள அனைத்தும்</span>
+                                </span>
+
+                            </div>
+                        </div>
+                    </div>
 
 
+                    <div class="row">
+                        <div class="col-12 mt-4">
+                            <label class="bold">Q9 : நெகிழி சுகாதார பிரச்சனைகளை ஏற்படுத்துமா?</label>
+                            <div class="mt-2">
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ9" id="chkQ9" data-content="true">
+                                    <span class="chkText">ஆம்</span>
+                                </span>
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ9" id="chkQ9">
+                                    <span class="chkText">இல்லை</span>
+                                </span>
 
 
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="row">
+                        <div class="col-12 mt-4">
+                            <label class="bold">Q10 : நெகிழி மாசுபாட்டை எவ்வாறு குறைக்கலாம்?</label>
+                            <div class="mt-2">
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ10" id="chkQ10">
+                                    <span class="chkText">ஒருமுறை பயன்படுத்தும் பிளாஸ்டிக்கை பயன்படுத்துவதை தவிர்க்கவும்</span> <br />
+                                </span>
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ10" id="chkQ10">
+                                    <span class="chkText">ஷாப்பிங் செய்ய துணி பையை எடுத்துச் செல்லுங்கள்</span> <br />
+                                </span>
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ10" id="chkQ10">
+                                    <span class="chkText">ஒருமுறை பயன்படுத்தும் பிளாஸ்டிக் பாட்டில்களுக்குப் பதிலாக துருப்பிடிக்காத எஃகு அல்லது கண்ணாடி பாட்டில்களைப் பயன்படுத்துதல்</span> <br />
+                                </span>
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ10" id="chkQ10" data-content="true">
+                                    <span class="chkText">மேலே உள்ள அனைத்தும்</span>
+                                </span>
 
+                            </div>
+                        </div>
+                    </div>
 
-
-
-
-
+                </section>
 
             </div>
         </section><!-- End Facts Section -->
@@ -180,7 +344,7 @@
 
     </main><!-- End #main -->
     <!-- ======= Footer ======= -->
-    <footer id="footer">
+    <footer id="footer" style="height: 80px">
         <div class="container">
 
             <div class="copyright">
@@ -193,8 +357,11 @@
     <div id="preloader"></div>
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-    <!-- Vendor JS Files -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ 
+    <script src="../static/animations/sweetalert/sweetalert2.js"></script>
+    <script src="../static/js/jquery.min.js"></script>
+
+
 
     <script src="../static/animations/aos/aos.js"></script>
     <script src="../static/animations/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -215,6 +382,36 @@
         (function () {
 
 
+            $("#quizContainer").hide();
+            $("#footer").hide();
+
+            $("#btnshowQuiz").click(function () {
+
+                if ($("#txtUniqueId").val() == "") {
+                    Swal.fire(
+                        'Unique Id missing!',
+                        'Please enter your 11 digit unique id!!',
+                        'error'
+                    )
+                    return false;
+                }
+
+
+                $.ajax({
+                    url: "/logs/putlogs.php?q=Q1TA&u=" + $("#txtUniqueId").val(),
+                    type: 'GET',
+                    success: function (res) {
+                        console.log(res);
+                     //   alert(res);
+                    }
+                });
+
+
+
+                $("#quizContainer").show();
+                $("#footer").show();
+
+            });
 
             $("input[type='radio']").click(function () {
 
@@ -227,6 +424,11 @@
 
                 if ($(this).attr('data-content') == "true") {
                     $(this).parent().addClass("chkgreen");
+                    Swal.fire(
+                        'Good job!',
+                        'Your answer is correct! KEEP IT UP',
+                        'success'
+                    )
                 }
                 else {
                     $(this).parent().addClass("chkred");
