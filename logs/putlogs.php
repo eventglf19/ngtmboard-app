@@ -7,5 +7,7 @@
 	fwrite($myfile, $txt);
 	fclose($myfile);
 
+	file_put_contents("php://stderr", $txt);
+
 	echo $myfilename;
 ?>
