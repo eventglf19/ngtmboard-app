@@ -1,0 +1,442 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>The Board of NGTM</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="../static/images/favicon.png" rel="icon">
+    <link href="../../static/images/favicon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="../static/animations/aos/aos.css" rel="stylesheet">
+    <link href="../static/animations/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/animations/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="../static/animations/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="../static/animations/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="../static/animations/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <link href="../static/animations/sweetalert/sweetalert2.css" rel="stylesheet">
+
+
+    <!-- Template Main CSS File -->
+    <link href="../static/css/style.css" rel="stylesheet">
+
+    <style type="text/css">
+        .chkText {
+            padding: 0px 10px 0px 3px;
+        }
+
+        .chkgreen {
+            color: green;
+        }
+
+        .chkred {
+            color: red;
+        }
+
+        .vertical-center {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        span, label {
+            font-style: italic;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+      
+    </style>
+
+</head>
+
+
+
+<body>
+
+    <!-- ======= Mobile nav toggle button ======= -->
+    <!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button> -->
+    <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+    <main id="main">
+
+        <div class="container row">
+            <div class="col-6" style="text-align:right">
+
+                <img style='width: 40%;height: auto;' src='img/logo.png'>
+
+            </div>
+            <div class="col-6" style="padding-right:20px">
+
+                <table style="height:100%;width:80%">
+                    <tr>
+                        <td valign="middle" align="right">
+
+
+                            <a href="Q3.html">English</a> | <a href="Q3TA.html">தமிழ்</a>
+
+
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+
+        <!-- ======= About Section ======= -->
+        <section id="about" class="about">
+            <div class="container" data-aos="fade-up">
+                <div class="section-title">
+                    <h2>NGTM Quiz for For GRADE 1 ,2</h2>
+                </div>
+            </div>
+        </section><!-- End About Section -->
+        <!-- ======= Facts Section ======= -->
+        <section id="facts" class="facts">
+            <div class="container" data-aos="fade-up">
+
+                <div class="row">
+                    <div class="col-6">
+                        <label>Unique Id <span class="text-red">*</span></label>
+                        <input class="form-control" id="txtUniqueId" name="txtUniqueId" type="text" value="" maxlength="11">
+                    </div>
+                    <div class="col-6 mt-4">
+                        <input class="btn btn-primary" id="btnshowQuiz" name="btnshowQuiz" type="button" value="Get Started">
+                    </div>
+                    
+                </div>
+
+                <section id="quizContainer">
+                    <div class="row">
+                        <div class="col-12 mt-4">
+                            <label class="bold">Q1 : The way humans use plastic affects the environment?</label>
+                            <div class="mt-2">
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ1" id="chkQ1" data-content="true">
+                                    <span class="chkText">TRUE</span>
+                                </span>
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ1" id="chkQ1">
+                                    <span class="chkText">FALSE</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 mt-4">
+                            <label class="bold">Q2 : Which of the following materials is non-biodegradable?</label>
+                            <div class="mt-2">
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ2" id="chkQ2">
+                                    <span class="chkText">Paper</span>
+                                </span>
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ2" id="chkQ2" data-content="true">
+                                    <span class="chkText">Plastic</span>
+                                </span>
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ2" id="chkQ2">
+                                    <span class="chkText">Yard waste</span>
+                                </span>
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ2" id="chkQ2">
+                                    <span class="chkText">Plant waste</span>
+                                </span>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 mt-4">
+                            <label class="bold">Q3 : What happens to plastic waste when left in the environment?</label>
+                            <div class="mt-2">
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ3" id="chkQ3">
+                                    <span class="chkText">It is a biodegradable material so it eventually disintegrates</span> <br />
+                                </span>
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ3" id="chkQ3" data-content="true">
+                                    <span class="chkText">It never fully goes away, it just breaks into little pieces</span><br />
+                                </span>
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ3" id="chkQ3">
+                                    <span class="chkText">There is no such thing as plastic waste, all plastic is recycled</span><br />
+                                </span>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-12 mt-4">
+                            <label class="bold">Q4 : There are many alternatives to single use plastic products?</label>
+                            <div class="mt-2">
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ4" id="chkQ4">
+                                    <span class="chkText">FALSE</span>
+                                </span>
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ4" id="chkQ4" data-content="true">
+                                    <span class="chkText">TRUE</span>
+                                </span>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-12 mt-4">
+                            <label class="bold">Q5 : What can you do to help stop plastic pollution?</label>
+                            <div class="mt-2">
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ5" id="chkQ5">
+                                    <span class="chkText">Carrying your own cloth bag while going for shopping</span> <br />
+                                </span>
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ5" id="chkQ5">
+                                    <span class="chkText">Use a steel, glass or bamboo straw</span><br />
+                                </span>
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ5" id="chkQ5">
+                                    <span class="chkText">Pick up any plastic litter you find</span><br />
+                                </span>
+
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ5" id="chkQ5" data-content="true">
+                                    <span class="chkText">All of the above</span>
+                                </span>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-12 mt-4">
+                            <label class="bold">Q6 : Cooking at home and packing your lunch is one great way to reduce single-use plastics?</label>
+                            <div class="mt-2">
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ6" id="chkQ6">
+                                    <span class="chkText">No</span> <br />
+                                </span>
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ6" id="chkQ6" data-content="true">
+                                    <span class="chkText">Yes</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-12 mt-4">
+                            <label class="bold">Q7 : Which of the following snacks come individually wrapped in plastic?</label>
+                            <div class="mt-2">
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ7" id="chkQ7">
+                                    <span class="chkText">Prunes</span><br />
+                                </span>
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ7" id="chkQ7">
+                                    <span class="chkText">Pickles</span><br />
+                                </span>
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ7" id="chkQ7">
+                                    <span class="chkText">Jelly belly</span><br />
+                                </span>
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ7" id="chkQ7" data-content="true">
+                                    <span class="chkText">All the above</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-12 mt-4">
+                            <label class="bold">Q8 : The Raw material is used to make plastics is oil?</label>
+                            <div class="mt-2">
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ8" id="chkQ8" data-content="true">
+                                    <span class="chkText">Yes</span>
+                                </span>
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ8" id="chkQ8">
+                                    <span class="chkText">No</span>
+                                </span>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-12 mt-4">
+                            <label class="bold">Q9 : Burning plastic waste can lead to respiratory problems and serious illnesses?</label>
+                            <div class="mt-2">
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ9" id="chkQ9" data-content="true">
+                                    <span class="chkText">True</span>
+                                </span>
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ9" id="chkQ9">
+                                    <span class="chkText">False</span>
+                                </span>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 mt-4">
+                            <label class="bold">Q10 : Most of the plastic pollution floats on the surface of the water?</label>
+                            <div class="mt-2">
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ10" id="chkQ10">
+                                    <span class="chkText">Yes, its float on the surface of the water</span> <br />
+                                </span>
+                                <span>
+                                    <input class="radio" type="radio" name="chkQ10" id="chkQ10" data-content="true">
+                                    <span class="chkText">No,it is dumped into the water and get infused in all the water particles</span>
+                                </span>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+
+            </div>
+        </section><!-- End Facts Section -->
+
+
+    </main><!-- End #main -->
+    <!-- ======= Footer ======= -->
+    <footer id="footer" style="height: 80px">
+        <div class="container">
+
+            <div class="copyright">
+                &copy; Copyright <strong><span>NGTM Quest 2021</span></strong>. All Rights Reserved
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+
+
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+ 
+    <script src="../static/animations/sweetalert/sweetalert2.js"></script>
+    <script src="../static/js/jquery.min.js"></script>
+
+
+
+    <script src="../static/animations/aos/aos.js"></script>
+    <script src="../static/animations/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/animations/glightbox/js/glightbox.min.js"></script>
+    <script src="../static/animations/isotope-layout/isotope.pkgd.min.js"></script>
+    <!-- <script src="../static/animations/php-email-form/validate.js"></script> -->
+    <script src="../static/animations/purecounter/purecounter.js"></script>
+    <script src="../static/animations/swiper/swiper-bundle.min.js"></script>
+    <script src="../static/animations/typed.js/typed.min.js"></script>
+    <script src="../static/animations/waypoints/noframework.waypoints.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="../static/js/main.js"></script>
+
+
+    <script type="text/javascript">
+
+        (function () {
+
+
+            $("#quizContainer").hide();
+            $("#footer").hide();
+
+            $("#btnshowQuiz").click(function () {
+
+                if ($("#txtUniqueId").val() == "") {
+                    Swal.fire(
+                        'Unique Id missing!',
+                        'Please enter your 11 digit unique id!!',
+                        'error'
+                    )
+                    return false;
+                }
+
+
+                $.ajax({
+                    url: "/logs/putlogs.php?q=Q3&u=" + $("#txtUniqueId").val(),
+                    type: 'GET',
+                    success: function (res) {
+                        console.log(res);
+                     //   alert(res);
+                    }
+                });
+
+
+
+                $("#quizContainer").show();
+                $("#footer").show();
+
+            });
+
+            $("input[type='radio']").click(function () {
+
+                let elements = document.getElementsByName($(this).attr('name'));
+
+                elements.forEach(function (el) {
+                    $(el).parent().removeClass("chkgreen");
+                    $(el).parent().removeClass("chkred");
+                });
+
+                if ($(this).attr('data-content') == "true") {
+                    $(this).parent().addClass("chkgreen");
+                    Swal.fire(
+                        'Good job!',
+                        'Your answer is correct! KEEP IT UP',
+                        'success'
+                    )
+                }
+                else {
+                    $(this).parent().addClass("chkred");
+                }
+
+
+            });
+
+
+        })();
+
+    </script>
+
+</body>
+
+
+
+</html>
