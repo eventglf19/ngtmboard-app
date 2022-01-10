@@ -389,6 +389,24 @@
                     return false;
                 }
 
+                 if ($("#txtUniqueId").val().length != 11) {
+                    Swal.fire(
+                       'பிரத்யேக குறியீடு!',
+                        '11 இலக்க எண்ணை  சரியாக பதிவிடவும்!',
+                        'error'
+                    )
+                    return false;
+                }
+
+              if ( $("#txtUniqueId").val().startsWith("P") == false && $("#txtUniqueId").val().startsWith("p") == false ) {
+                    Swal.fire(
+                       'பிரத்யேக குறியீடு!',
+                        '11 இலக்க எண்ணை  சரியாக பதிவிடவும்!',
+                        'error'
+                    )
+                    return false;
+                }
+                
 
                 $.ajax({
                     url: "/logs/putlogs.php?q=Q3TA&u=" + $("#txtUniqueId").val(),
