@@ -396,6 +396,14 @@
                     return false;
                 }
 
+               if ($("#txtUniqueId").val().length != 11) {
+                    Swal.fire(
+                        'Unique Id missing!',
+                        'Please enter your 11 digit unique id!!',
+                        'error'
+                    )
+                    return false;
+                }
 
                 $.ajax({
                     url: "/logs/putlogs.php?q=Q1&u=" + $("#txtUniqueId").val(),
