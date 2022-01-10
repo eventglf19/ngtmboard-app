@@ -405,6 +405,17 @@
                     return false;
                 }
 
+              if ( $("#txtUniqueId").val().startsWith("P") == false && $("#txtUniqueId").val().startsWith("p") == false ) {
+                    Swal.fire(
+                        'Unique Id missing!',
+                        'Please enter your 11 digit unique id starting with P !!',
+                        'error'
+                    )
+                    return false;
+                }
+
+                
+                
                 $.ajax({
                     url: "/logs/putlogs.php?q=Q1&u=" + $("#txtUniqueId").val(),
                     type: 'GET',
